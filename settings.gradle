@@ -5,13 +5,7 @@ include ':home-module'
 include ':safa-module'
 include ':main-library'
 include ':find-module'
-<<<<<<< HEAD
-
 include ':network_library'
-=======
-<<<<<<< HEAD
 include ':chche_library'
-=======
 include ':login-model'
->>>>>>> ca155bca08a6a30e45d8aef8fd993aeef08e5107
->>>>>>> 4f9614a9a60a9bb176d1e34f75ff6deb54438815
+
