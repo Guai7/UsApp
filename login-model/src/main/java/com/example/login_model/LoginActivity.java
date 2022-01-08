@@ -1,15 +1,14 @@
-package com.example.home_module;
+package com.example.login_model;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class HomeActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        //啦啦啦
+        setContentView(R.layout.activity_login);
     }
 }
