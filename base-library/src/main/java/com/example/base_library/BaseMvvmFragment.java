@@ -1,10 +1,12 @@
 package com.example.base_library;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModel;
 
@@ -14,19 +16,17 @@ import java.util.Map;
 /**
  * <p>描述：</p>
  * 作者： guai<br>
- * 日期：  13:06 <br>
+ * 日期：  16:30 <br>
  * 版本： v1.0<br>
  */
-public abstract class BaseMvvmActivity<DB extends ViewDataBinding,VM extends ViewModel> extends BaseActivity<DB> {
+public abstract class BaseMvvmFragment<DB extends ViewDataBinding,VM extends ViewModel> extends BaseFragment<DB> {
 
-    protected DB databinding;
     protected VM viewModel;
-
     private HashMap<Integer,Object> map = new HashMap<>();
 
     @Override
-    protected void initEnv() {
-        super.initEnv();
+    protected void intEnv() {
+
         databinding.setLifecycleOwner(this);
 
         viewModel = createViewModel();
@@ -44,14 +44,4 @@ public abstract class BaseMvvmActivity<DB extends ViewDataBinding,VM extends Vie
     }
 
     protected abstract VM createViewModel();
-
-    @Override
-    protected void initData() {
-
-    }
-
-    @Override
-    protected void initView() {
-
-    }
 }

@@ -5,6 +5,8 @@ import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 
 /**
  * <p>描述：</p>
@@ -12,7 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
  * 日期：  14:03 <br>
  * 版本： v1.0<br>
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity<DB extends ViewDataBinding> extends AppCompatActivity {
+
+    protected DB databinding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
@@ -22,7 +26,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         initData();
     }
 
-    protected abstract void initEnv();
+    protected void initEnv(){
+        databinding = DataBindingUtil.setContentView(this, bindLayout());
+    }
+
+    protected abstract int bindLayout();
 
     protected abstract void initView();
 
