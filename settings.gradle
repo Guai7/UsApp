@@ -5,8 +5,5 @@ include ':home-module'
 include ':safa-module'
 include ':main-library'
 include ':find-module'
-<<<<<<< HEAD
 include ':chche_library'
-=======
 include ':login-model'
->>>>>>> ca155bca08a6a30e45d8aef8fd993aeef08e5107
