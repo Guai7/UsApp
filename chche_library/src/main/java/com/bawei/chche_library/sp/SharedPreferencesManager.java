@@ -1,10 +1,7 @@
-package com.bawei.chche_library;
+package com.bawei.chche_library.sp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.EditText;
-
-import androidx.annotation.IdRes;
 
 /**
  * Date:2022/1/8
@@ -62,7 +59,7 @@ public class SharedPreferencesManager {
         edit.apply();
     }
 
-    //取值
+    //取值   参数一:上下文   参数二：键   参数三 ： 值 参数四：文件名
     public Object getValue(Context context,String key,Object value,String name){
 
         SharedPreferences sharedPreferences = context.getSharedPreferences(name, Context.MODE_PRIVATE);
