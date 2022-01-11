@@ -1,4 +1,4 @@
-package com.bw.network_library.network_utils;
+package com.bw.network_library;
 
 import android.content.Context;
 import android.net.TrafficStats;
